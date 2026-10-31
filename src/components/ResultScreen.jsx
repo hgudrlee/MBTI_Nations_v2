@@ -11,7 +11,10 @@ export default function ResultScreen({
   return (
     <main className="app-shell result-screen">
       <header className="topbar">
-        <button className="brand-button" onClick={onHome}>민족 <span>MBTI</span></button>
+        <button className="brand-button" onClick={onHome}>
+          <img className="brand-logo" src="/favicon.svg?v=2" alt="" />
+          <span className="brand-name">민족 <span>MBTI</span></span>
+        </button>
       </header>
       <section className="result-layout">
         <div className="result-intro">
@@ -44,6 +47,7 @@ export default function ResultScreen({
           </div>
         </div>
       </section>
+      <footer className="site-footer">© vision_pohang</footer>
     </main>
   );
 }

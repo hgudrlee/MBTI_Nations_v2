@@ -1,6 +1,12 @@
 export default function IntroScreen({ onStart }) {
   return (
     <main className="app-shell intro-screen">
+      <header className="topbar">
+        <button className="brand-button" type="button">
+          <img className="brand-logo" src="/favicon.svg?v=2" alt="" />
+          <span className="brand-name">민족 <span>MBTI</span></span>
+        </button>
+      </header>
       <section className="intro-card">
         <h1>나의 <em>민족 MBTI</em>는?</h1>
         <p className="intro-copy">
@@ -16,6 +22,7 @@ export default function IntroScreen({ onStart }) {
           <span>14 nations</span>
         </div>
       </section>
+      <footer className="site-footer">© vision_pohang</footer>
     </main>
   );
 }

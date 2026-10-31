@@ -12,7 +12,10 @@ export default function QuestionScreen({
   return (
     <main className={`app-shell quiz-screen question-bg-${Math.floor(current / 2) + 1}`}>
       <header className="topbar">
-        <button className="brand-button" onClick={onHome}>민족 <span>MBTI</span></button>
+        <button className="brand-button" onClick={onHome}>
+          <img className="brand-logo" src="/favicon.svg?v=2" alt="" />
+          <span className="brand-name">민족 <span>MBTI</span></span>
+        </button>
       </header>
       <div className="progress-wrap">
         <div className="progress-info">
@@ -43,6 +46,7 @@ export default function QuestionScreen({
           ))}
         </div>
       </section>
+      <footer className="site-footer">© vision_pohang</footer>
     </main>
   );
 }
