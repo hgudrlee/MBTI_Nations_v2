@@ -1,4 +1,6 @@
-# React + Vite
+# MBTI_Nations_v2
+
+이 프로젝트는 React + Vite로 제작되었습니다.
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
