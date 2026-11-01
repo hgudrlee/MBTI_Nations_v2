@@ -109,20 +109,20 @@
 }
 .nation-flag { width:min(280px,100%); aspect-ratio:16 / 9; margin:0 0 28px; border:1px solid rgba(255,255,255,.22); border-radius:14px; background-position:center; background-size:cover; background-repeat:no-repeat; box-shadow:0 18px 40px rgba(0,0,0,.2); }
 .flag-ENFJ { background-image:url('./assets/images/flags/moroco.png'); }
-.flag-ENFP { background-image:url('./assets/images/flags/crimean.png'); }
+.flag-ENFP { background-image:url('./assets/images/flags/uyghur.png'); }
 .flag-ENTJ { background-image:url('./assets/images/flags/kurdistan.png'); }
 .flag-ENTP { background-image:url('./assets/images/flags/syria.png'); }
 .flag-ESFJ { background-image:url('./assets/images/flags/palestine.png'); }
-.flag-ESFP { background-image:url('./assets/images/flags/uyghur.png'); }
-.flag-ESTJ { background-image:url('./assets/images/flags/kashmir.png'); }
+.flag-ESFP { background-image:url('./assets/images/flags/egypt.png'); }
+.flag-ESTJ { background-image:url('./assets/images/flags/tunisia.png'); }
 .flag-ESTP { background-image:url('./assets/images/flags/egypt.png'); }
-.flag-INFJ { background-image:url('./assets/images/flags/sakha.png'); }
-.flag-INFP { background-image:url('./assets/images/flags/tunisia.png'); }
+.flag-INFP { background-image:url('./assets/images/flags/crimean.png'); }
 .flag-INTJ { background-image:url('./assets/images/flags/turkmenistan.png'); }
+.flag-INTP { background-image:url('./assets/images/flags/kashmir.png'); }
 .flag-ISFJ { background-image:url('./assets/images/flags/oman.png'); }
 .flag-ISFP { background-image:url('./assets/images/flags/karakalpakstan.png'); }
 .flag-ISTJ { background-image:url('./assets/images/flags/kurdistan.png'); }
-.flag-ISTP { background-image:url('./assets/images/flags/palestine.png'); }
+.flag-ISTP { background-image:url('./assets/images/flags/sakha.png'); }
 @media (max-width:760px) { .nation-flag { width:220px; margin-bottom:22px; } }
 .nation-flag { margin-top:18px; }
 @media (max-width:760px) { .nation-flag { margin-top:14px; } }
