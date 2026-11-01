@@ -44,6 +44,7 @@ export default function ResultScreen({
               );
             })}
           </div>
+          <p className="result-disclaimer">* 실제 MBTI 결과와는 다를 수 있습니다.</p>
           <div className="result-actions">
             <button className="primary-button" onClick={onShare} disabled={!shareReady}>
               {shareReady ? "결과 공유하기" : "이미지 준비 중"} <span>↗</span>

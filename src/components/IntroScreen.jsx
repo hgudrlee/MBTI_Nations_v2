@@ -19,7 +19,6 @@ export default function IntroScreen({ onStart }) {
         <div className="intro-meta">
           <span>약 3분</span>
           <span>12 questions</span>
-          <span>14 nations</span>
         </div>
       </section>
       <footer className="site-footer">© vision_pohang</footer>
