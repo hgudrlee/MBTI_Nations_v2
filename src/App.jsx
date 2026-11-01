@@ -63,7 +63,7 @@ function App() {
 
     if (typeof navigator.share === "function" && navigator.canShare?.({ files: [currentShareImage.file] })) {
       try {
-        navigator.share({ files: [currentShareImage.file], title: "민족 MBTI" }).catch((error) => {
+        navigator.share({ files: [currentShareImage.file] }).catch((error) => {
           if (error?.name === "AbortError") return;
           console.error("Failed to share result image.", error);
           setShareMessage("결과 이미지를 공유하지 못했어요. 다시 시도해 주세요.");
