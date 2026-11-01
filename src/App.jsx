@@ -57,15 +57,13 @@ function App() {
   const goIntro = () => { setAnswers(Array(questions.length).fill(null)); setCurrent(0); setShareMessage(""); setScreen("intro"); };
   const currentShareImage = shareImage?.result === result ? shareImage : null;
   const handleShare = () => {
-    const nation = nationMap[result];
-    const text = `나의 민족 MBTI는 ${result}, ${nation} 민족입니다.`;
     setShareMessage("");
 
     if (!currentShareImage) return;
 
     if (typeof navigator.share === "function" && navigator.canShare?.({ files: [currentShareImage.file] })) {
       try {
-        navigator.share({ files: [currentShareImage.file], title: "민족 MBTI", text }).catch((error) => {
+        navigator.share({ files: [currentShareImage.file], title: "민족 MBTI" }).catch((error) => {
           if (error?.name === "AbortError") return;
           console.error("Failed to share result image.", error);
           setShareMessage("결과 이미지를 공유하지 못했어요. 다시 시도해 주세요.");
