@@ -27,13 +27,14 @@ export default function ResultScreen({
           <div className="axis-list">
             {Object.entries(axisLetters).map(([axis, letters]) => {
               const positive = scores[axis] > 0;
+              const strength = Math.max(4, Math.round(Math.abs(scores[axis]) * 48));
               return (
                 <div className="axis-row" key={axis}>
                   <div className="axis-labels">
                     <span className={positive ? "active" : ""}>{letters[0]}</span>
                     <span className={!positive ? "active" : ""}>{letters[1]}</span>
                   </div>
-                  <div className="axis-track"><span className={`axis-fill ${positive ? "left" : "right"}`} /></div>
+                  <div className="axis-track"><span className={`axis-fill ${positive ? "left" : "right"}`} style={{ width: `${strength}%` }} /></div>
                   <div className="axis-name">
                     {axis === "EI" ? "에너지" : axis === "NS" ? "인식" : axis === "FT" ? "판단" : "생활"}
                   </div>
