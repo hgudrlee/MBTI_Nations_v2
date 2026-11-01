@@ -4,6 +4,8 @@ export default function ResultScreen({
   axisLetters,
   nationMap,
   nationNotes,
+  shareReady,
+  shareMessage,
   onHome,
   onRestart,
   onShare,
@@ -43,9 +45,12 @@ export default function ResultScreen({
             })}
           </div>
           <div className="result-actions">
-            <button className="primary-button" onClick={onShare}>결과 공유하기 <span>↗</span></button>
+            <button className="primary-button" onClick={onShare} disabled={!shareReady}>
+              {shareReady ? "결과 공유하기" : "이미지 준비 중"} <span>↗</span>
+            </button>
             <button className="text-button" onClick={onRestart}>다시 테스트하기</button>
           </div>
+          {shareMessage && <p className="share-feedback" role="status">{shareMessage}</p>}
         </div>
       </section>
       <footer className="site-footer">© vision_pohang</footer>
