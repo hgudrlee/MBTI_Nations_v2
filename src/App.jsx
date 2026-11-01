@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import IntroScreen from "./components/IntroScreen";
+import LoadingScreen from "./components/LoadingScreen";
 import QuestionScreen from "./components/QuestionScreen";
 import ResultScreen from "./components/ResultScreen";
 import { getMbti, getScores } from "./utils/scoring";
@@ -20,6 +21,14 @@ function App() {
   const progress = ((current + (screen === "result" ? 1 : 0)) / questions.length) * 100;
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: "smooth" }); }, [screen, current]);
+
+  useEffect(() => {
+    if (screen !== "loading") return undefined;
+
+    const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 1000 : 3800;
+    const timeout = window.setTimeout(() => setScreen("result"), duration);
+    return () => window.clearTimeout(timeout);
+  }, [screen]);
 
   useEffect(() => {
     if (screen !== "result") return undefined;
@@ -50,7 +59,7 @@ function App() {
   const selectAnswer = (value) => {
     if (!question) return;
     const nextAnswers = [...answers]; nextAnswers[current] = value; setAnswers(nextAnswers);
-    if (current === questions.length - 1) setScreen("result");
+    if (current === questions.length - 1) setScreen("loading");
     else setCurrent((step) => Math.min(step + 1, questions.length - 1));
   };
   const goBack = () => current === 0 ? setScreen("intro") : setCurrent((step) => step - 1);
@@ -85,6 +94,7 @@ function App() {
   };
 
   if (screen === "intro") return <IntroScreen onStart={start} />;
+  if (screen === "loading") return <LoadingScreen />;
   if (screen === "result") return <ResultScreen result={result} scores={scores} axisLetters={axisLetters} nationMap={nationMap} nationNotes={nationNotes} shareReady={Boolean(currentShareImage)} shareMessage={shareMessage} onHome={goIntro} onRestart={goIntro} onShare={handleShare} />;
   return <QuestionScreen current={current} questions={questions} answers={answers} progress={progress} onHome={goIntro} onBack={goBack} onSelect={selectAnswer} />;
 
