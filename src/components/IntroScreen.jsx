@@ -17,8 +17,8 @@ export default function IntroScreen({ onStart }) {
           테스트 시작하기 <span>→</span>
         </button>
         <div className="intro-meta">
-          <span>약 3분</span>
-          <span>12 questions</span>
+          <span>약 1분</span>
+          <span>12 질문</span>
         </div>
       </section>
       <footer className="site-footer">© vision_pohang</footer>

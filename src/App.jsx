@@ -6,7 +6,7 @@ import QuestionScreen from "./components/QuestionScreen";
 import ResultScreen from "./components/ResultScreen";
 import { getMbti, getScores } from "./utils/scoring";
 import { getResultImage } from "./utils/resultImage";
-import { axisLetters, nationMap, nationNotes, questions } from "./data/quizData";
+import { axisLetters, nationMap, questions } from "./data/quizData";
 
 
 function App() {
@@ -95,7 +95,7 @@ function App() {
 
   if (screen === "intro") return <IntroScreen onStart={start} />;
   if (screen === "loading") return <LoadingScreen />;
-  if (screen === "result") return <ResultScreen result={result} scores={scores} axisLetters={axisLetters} nationMap={nationMap} nationNotes={nationNotes} shareReady={Boolean(currentShareImage)} shareMessage={shareMessage} onHome={goIntro} onRestart={goIntro} onShare={handleShare} />;
+  if (screen === "result") return <ResultScreen result={result} nationMap={nationMap} onRestart={goIntro} />;
   return <QuestionScreen current={current} questions={questions} answers={answers} progress={progress} onHome={goIntro} onBack={goBack} onSelect={selectAnswer} />;
 
 }
