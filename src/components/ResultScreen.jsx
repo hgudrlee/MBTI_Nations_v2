@@ -20,7 +20,7 @@ export default function ResultScreen({
       </header>
       <section className="result-layout">
         <div className="result-intro">
-          <p className="result-overline">당신의 민족은</p>
+          <p className="result-overline">나의 민족은</p>
           <h1>{nationMap[result]}</h1>
           <div className={`nation-flag flag-${result}`} role="img" aria-label={`${nationMap[result]} 국기`} />
         </div>
