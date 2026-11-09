@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css');
 :root { --ink:#17211f; --muted:#71807b; --line:#dbe4de; --paper:#f5f7f2; --lime:#d7f26b; --green:#1b6155; --deep:#123c36; }
 * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font-family:'Pretendard',sans-serif; } button { font:inherit; }
-.app-shell { min-height:100vh; position:relative; overflow:hidden; } .intro-screen { min-height:100svh; display:flex; align-items:center; justify-content:flex-start; background-color:var(--deep); background-image:linear-gradient(90deg,rgba(3,10,19,.88) 0%,rgba(5,18,32,.7) 42%,rgba(5,18,32,.18) 100%),url('./assets/images/backgrounds/airplane-window.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; color:#f8faef; padding:32px clamp(24px,6vw,96px); } .intro-screen .topbar { position:absolute; top:32px; left:clamp(24px,6vw,96px); right:clamp(24px,6vw,96px); } .intro-screen .brand-button { color:#f8faef; } .intro-screen .brand-button span { color:var(--lime); }
+.app-shell { min-height:100vh; position:relative; overflow:hidden; } .intro-screen { min-height:100svh; display:flex; align-items:center; justify-content:flex-start; background-color:var(--deep); background-image:linear-gradient(90deg,rgba(3,10,19,.88) 0%,rgba(5,18,32,.7) 42%,rgba(5,18,32,.18) 100%),url('./assets/images/backgrounds/airplane-window.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; color:#f8faef; padding:32px clamp(24px,6vw,96px); } .intro-screen .topbar { position:absolute; top:34px; left:clamp(24px,6vw,96px); right:clamp(24px,6vw,96px); } .intro-screen .brand-button { color:#f8faef; } .intro-screen .brand-button span { color:var(--lime); }
 .ambient { position:absolute; border-radius:50%; pointer-events:none; } .ambient-one { width:48vw; height:48vw; background:#286c5e; opacity:.45; top:-21vw; right:-10vw; } .ambient-two { width:24vw; height:24vw; border:1px solid rgba(215,242,107,.32); bottom:-9vw; left:7vw; }
 .intro-card { width:min(780px,100%); position:relative; z-index:1; margin-left:clamp(0px,6vw,90px); padding:clamp(28px,4vw,54px) clamp(32px,5vw,64px); border:1px solid rgba(255,255,255,.22); border-left:4px solid var(--lime); background:linear-gradient(135deg,rgba(6,20,31,.78),rgba(9,34,43,.4)); box-shadow:0 28px 100px rgba(0,0,0,.28); backdrop-filter:blur(5px); }
 .intro-card h1 { white-space:nowrap; letter-spacing:-.02em; margin:0 0 20px; }
@@ -200,7 +200,7 @@
 
 @media (max-width:760px) {
   .intro-screen { min-height:100svh; padding:76px 18px 56px; }
-  .intro-screen .topbar { top:18px; left:18px; right:18px; }
+  .intro-screen .topbar { top:20px; left:16px; right:16px; }
   .intro-card { width:100%; margin:0; padding:28px 24px 26px; }
   .intro-card h1 { font-size:clamp(24px,7.8vw,38px); line-height:1.08; letter-spacing:-.05em; white-space:nowrap; margin:0 0 16px; }
   .intro-copy { margin-bottom:20px; font-size:17px; line-height:1.65; }
