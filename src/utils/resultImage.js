@@ -3,7 +3,7 @@ const resultImageUrls = import.meta.glob("../assets/images/results/*_results.png
   query: "?url",
   import: "default",
 });
-const resultBackgroundUrls = import.meta.glob("../assets/images/result_bgs/*.{jpg,png}", {
+const resultBackgroundUrls = import.meta.glob("../assets/images/result_bgs/*.jpg", {
   eager: true,
   query: "?url",
   import: "default",
@@ -32,7 +32,7 @@ const nationBackgroundFiles = {
   쿠르디스탄: "kurdistan_bg.jpg",
   시리아: "syria_bg.jpg",
   팔레스타인: "palestine_bg.jpg",
-  이집트: "egypt.png",
+  이집트: "egypt_bg.jpg",
   튀니지: "tunisia_bg.jpg",
   크림타타르: "crimean_bg.jpg",
   라다크: "ladakh_bg.jpg",

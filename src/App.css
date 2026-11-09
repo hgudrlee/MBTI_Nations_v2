@@ -3,14 +3,14 @@
 * { box-sizing:border-box; } body { margin:0; background:var(--paper); color:var(--ink); font-family:'Pretendard',sans-serif; } button { font:inherit; }
 .app-shell { min-height:100vh; position:relative; overflow:hidden; } .intro-screen { min-height:100svh; display:flex; align-items:center; justify-content:flex-start; background-color:var(--deep); background-image:linear-gradient(90deg,rgba(3,10,19,.88) 0%,rgba(5,18,32,.7) 42%,rgba(5,18,32,.18) 100%),url('./assets/images/backgrounds/airplane-window.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; color:#f8faef; padding:32px clamp(24px,6vw,96px); } .intro-screen .topbar { position:absolute; top:32px; left:clamp(24px,6vw,96px); right:clamp(24px,6vw,96px); } .intro-screen .brand-button { color:#f8faef; } .intro-screen .brand-button span { color:var(--lime); }
 .ambient { position:absolute; border-radius:50%; pointer-events:none; } .ambient-one { width:48vw; height:48vw; background:#286c5e; opacity:.45; top:-21vw; right:-10vw; } .ambient-two { width:24vw; height:24vw; border:1px solid rgba(215,242,107,.32); bottom:-9vw; left:7vw; }
-.intro-card { width:min(780px,100%); position:relative; z-index:1; margin-left:clamp(0px,6vw,90px); padding:clamp(28px,4vw,54px); border:1px solid rgba(255,255,255,.22); border-left:4px solid var(--lime); background:linear-gradient(135deg,rgba(6,20,31,.78),rgba(9,34,43,.4)); box-shadow:0 28px 100px rgba(0,0,0,.28); backdrop-filter:blur(5px); }
-.intro-card h1 { white-space:nowrap; letter-spacing:-.02em; }
+.intro-card { width:min(780px,100%); position:relative; z-index:1; margin-left:clamp(0px,6vw,90px); padding:clamp(28px,4vw,54px) clamp(32px,5vw,64px); border:1px solid rgba(255,255,255,.22); border-left:4px solid var(--lime); background:linear-gradient(135deg,rgba(6,20,31,.78),rgba(9,34,43,.4)); box-shadow:0 28px 100px rgba(0,0,0,.28); backdrop-filter:blur(5px); }
+.intro-card h1 { white-space:nowrap; letter-spacing:-.02em; margin:0 0 20px; }
 .eyebrow { color:#98b4a4; font:500 13px/1.2 'Pretendard',sans-serif; letter-spacing:.16em; margin:0 0 30px; } .eyebrow-dot { display:inline-block; width:7px; height:7px; margin-right:9px; background:var(--lime); border-radius:50%; }
 .intro-visual { position:absolute; top:38px; right:8%; color:rgba(215,242,107,.92); font:800 clamp(70px,15vw,160px)/.8 'Pretendard',sans-serif; letter-spacing:-.12em; } .intro-visual strong { display:block; margin-left:48%; color:rgba(255,255,255,.18); font-size:.38em; letter-spacing:-.04em; }
 .kicker,.question-count,.result-overline { color:var(--lime); font-weight:700; font-size:14px; letter-spacing:.04em; } h1 { font-size:clamp(42px,7vw,82px); line-height:1.03; letter-spacing:-.08em; margin:14px 0 22px; } h1 em { color:var(--lime); font-style:normal; }
-.intro-copy { color:#b8ccc0; font-size:18px; line-height:1.7; } .primary-button { border:0; cursor:pointer; display:inline-flex; justify-content:space-between; gap:38px; align-items:center; min-width:210px; padding:17px 21px; color:var(--deep); background:var(--lime); font-size:16px; font-weight:800; transition:.2s ease; } .primary-button span { font-size:22px; }
+.intro-copy { margin:0 0 28px; color:#b8ccc0; font-size:18px; line-height:1.7; } .primary-button { border:0; cursor:pointer; display:inline-flex; justify-content:space-between; gap:38px; align-items:center; min-width:210px; padding:17px 21px; color:var(--deep); background:var(--lime); font-size:16px; font-weight:800; transition:.2s ease; } .primary-button span { font-size:22px; }
 @media (hover:hover) and (pointer:fine) { .primary-button:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgba(215,242,107,.18); } }
-.intro-meta { display:flex; gap:24px; margin-top:42px; color:#8eaa9b; font:16px 'Pretendard',sans-serif; text-transform:uppercase; } .intro-meta span+span::before { content:'·'; margin-right:24px; color:var(--lime); }
+.intro-meta { display:flex; gap:24px; margin-top:26px; color:#8eaa9b; font:16px 'Pretendard',sans-serif; text-transform:uppercase; } .intro-meta span+span::before { content:'·'; margin-right:24px; color:var(--lime); }
 .quiz-screen,.result-screen { min-height:100svh; padding:34px clamp(24px,6vw,96px); background:var(--paper); } .topbar { display:flex; justify-content:space-between; align-items:center; position:relative; z-index:2; } .brand-button,.exit-button { border:0; padding:0; background:none; color:var(--ink); cursor:pointer; font-weight:800; letter-spacing:-.06em; font-size:23px; } .brand-button { display:inline-flex; align-items:center; gap:9px; } .brand-logo { width:28px; height:28px; display:block; border-radius:8px; } .brand-name { letter-spacing:-.02em; } .brand-name span { color:var(--green); } .exit-button { color:var(--muted); font:12px 'Pretendard',sans-serif; letter-spacing:.08em; }
 .progress-wrap { width:min(1060px,100%); margin:9vh auto 0; } .progress-info,.result-panel-head { display:flex; justify-content:space-between; color:var(--green); font:15px 'Pretendard',sans-serif; letter-spacing:.1em; } .progress-info b { color:#a8b5ad; font-weight:400; } .progress-track { height:5px; margin-top:14px; background:#dfe7de; } .progress-track span { height:100%; display:block; background:var(--green); transition:width .35s ease; }
 .question-layout { width:min(1060px,100%); margin:12vh auto 0; display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(40px,8vw,140px); align-items:center; } .question-count { font:700 clamp(66px,10vw,118px)/.8 'Pretendard',sans-serif; color:#d3ddcf; letter-spacing:-.12em; margin:0 0 35px; } .question-copy h1 { font-size:clamp(28px,3.8vw,48px); line-height:1.3; max-width:480px; margin:0; } .question-help { color:var(--muted); font-size:16px; line-height:1.7; margin-top:30px; }
@@ -72,7 +72,7 @@
 .quiz-screen .site-footer { color:rgba(210,224,214,.78); }
 .result-screen .site-footer { color:#8eaa9b; }
 .result-actions button { border-radius:8px; }
-.intro-card h1 { font-size:clamp(48px,7vw,88px); }
+.intro-card h1 { font-size:clamp(42px,6vw,72px); }
 .intro-copy { font-size:22px; }
 .intro-meta { font-size:18px; }
 .intro-card .primary-button { border-radius:10px; font-size:18px; }
@@ -141,7 +141,7 @@
 @media (min-width:761px) and (max-width:1100px) {
   .intro-screen,.quiz-screen,.result-screen { padding-left:clamp(20px,3vw,40px); padding-right:clamp(20px,3vw,40px); }
   .intro-screen .topbar { left:clamp(20px,3vw,40px); right:clamp(20px,3vw,40px); }
-  .intro-card { margin-left:clamp(0px,3vw,40px); }
+  .intro-card { width:min(780px,calc(100% - clamp(0px,3vw,40px))); margin-left:clamp(0px,3vw,40px); }
   .progress-wrap,.question-layout,.result-layout { width:min(900px,100%); }
   .question-layout,.result-layout { gap:clamp(28px,5vw,64px); }
   .choices { grid-template-columns:1fr 1fr; }
@@ -201,11 +201,11 @@
 @media (max-width:760px) {
   .intro-screen { min-height:100svh; padding:76px 18px 56px; }
   .intro-screen .topbar { top:18px; left:18px; right:18px; }
-  .intro-card { width:100%; margin:0; padding:28px 20px 26px; }
-  .intro-card h1 { font-size:clamp(28px,9.5vw,44px); line-height:1.08; letter-spacing:-.05em; white-space:nowrap; margin:10px 0 18px; }
-  .intro-copy { font-size:17px; line-height:1.65; }
+  .intro-card { width:100%; margin:0; padding:28px 24px 26px; }
+  .intro-card h1 { font-size:clamp(24px,7.8vw,38px); line-height:1.08; letter-spacing:-.05em; white-space:nowrap; margin:0 0 16px; }
+  .intro-copy { margin-bottom:20px; font-size:17px; line-height:1.65; }
   .intro-card .primary-button { width:100%; min-width:0; justify-content:space-between; padding:15px 17px; font-size:16px; }
-  .intro-meta { gap:10px 14px; margin-top:28px; font-size:12px; }
+  .intro-meta { gap:10px 14px; margin-top:24px; font-size:16px; }
   .intro-meta span+span::before { margin-right:14px; }
   .brand-button { font-size:20px; gap:7px; }
   .brand-logo { width:25px; height:25px; border-radius:7px; }
@@ -251,6 +251,11 @@
 .loading-content h1 { margin:24px 0 12px; color:#f8faef; font-size:clamp(30px,7vw,42px); line-height:1.28; letter-spacing:-.06em; }
 .loading-description { margin:0; color:#b8ccc0; font-size:14px; line-height:1.7; }
 .loading-screen .site-footer { color:#6d9181; }
+@media (min-width:761px) and (max-width:1400px) {
+  .loading-content { width:min(560px,100%); }
+  .loading-content h1 { font-size:clamp(44px,5vw,56px); }
+  .loading-description { font-size:20px; line-height:1.75; }
+}
 @keyframes route-draw { to { stroke-dashoffset:0; } }
 @keyframes destination-pulse { 0% { opacity:.8; transform:scale(.7); } 100% { opacity:0; transform:scale(1.7); } }
 @media (prefers-reduced-motion:reduce) {
@@ -288,12 +293,19 @@
 
 .result-restart-screen { justify-content:center; align-items:center; gap:26px; background-image:linear-gradient(90deg,rgba(3,10,19,.9) 0%,rgba(5,18,32,.74) 45%,rgba(5,18,32,.3) 100%),var(--result-background-image,url('./assets/images/backgrounds/airplane-window.jpg')); background-size:cover; background-position:center; font-family:'Pretendard',sans-serif; }
 .result-restart-content { width:min(760px,100%); display:flex; align-items:center; justify-content:center; gap:clamp(20px,4vw,48px); }
-.result-restart-content.without-flag .result-restart-text { flex:0 1 auto; text-align:center; }
+.result-restart-content.without-flag .result-restart-text { flex:0 1 auto; text-align:left; }
 .result-restart-text { flex:1; min-width:0; }
+.result-restart-content { justify-content:flex-start; }
 .result-restart-content .result-overline { margin:0 0 8px; color:#f8faef; font-size:clamp(20px,2.4vw,28px); }
 .result-restart-content h1 { margin:0; color:var(--lime); font-size:clamp(36px,5vw,56px); line-height:1.1; overflow-wrap:anywhere; }
 .result-restart-content .nation-flag { flex:0 0 auto; width:clamp(160px,21vw,240px); margin:0; }
 .nation-story { width:min(760px,100%); margin:0; padding:clamp(18px,2.5vw,26px); border:1px solid rgba(255,255,255,.2); border-radius:12px; background:rgba(4,17,28,.62); box-shadow:0 12px 32px rgba(0,0,0,.18); backdrop-filter:blur(8px); color:#e7eee9; font-size:clamp(15px,1.8vw,18px); line-height:1.8; text-align:left; }
+@media (min-width:761px) and (max-width:1400px) {
+  .result-screen { padding-left:clamp(16px,2vw,24px); padding-right:clamp(16px,2vw,24px); }
+  .result-restart-content { width:min(920px,100%); }
+  .nation-story { width:min(920px,100%); font-size:18px; }
+  .result-restart-button { font-size:18px; }
+}
 .result-restart-button { justify-content:center; min-width:220px; border-radius:10px; }
 .result-type-label { position:absolute; right:clamp(16px,4vw,36px); bottom:16px; margin:0; color:rgba(248,250,239,.82); font:500 clamp(16px,1.25vw,18px)/1 'Pretendard',sans-serif; }
 
