@@ -309,6 +309,7 @@
 .result-type-label { position:absolute; right:clamp(16px,4vw,36px); bottom:16px; margin:0; color:rgba(248,250,239,.82); font:500 clamp(16px,1.25vw,18px)/1 'Pretendard',sans-serif; }
 
 @media (max-width:760px) {
+  .loading-description { font-size:14px; line-height:1.65; }
   .result-restart-content { gap:16px; }
   .result-restart-content .result-overline { margin-bottom:6px; font-size:clamp(16px,4.6vw,20px); }
   .result-restart-content h1 { font-size:clamp(23px,7vw,34px); }
